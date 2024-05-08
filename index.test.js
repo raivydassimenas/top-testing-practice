@@ -1,10 +1,10 @@
-const { capitalize } = require("./index");
+const index = require("./index");
 
 test("capitalize", () => {
-  expect(capitalize("raivydas")).toBe("Raivydas");
-  expect(capitalize("")).toBe("");
-  expect(capitalize("rAivydas")).toBe("Raivydas");
-  expect(() => capitalize("123")).toThrow(
-    "The string must consist of alphabetic characters only"
+  expect(index.capitalize("raivydas")).toBe("Raivydas");
+  expect(index.capitalize("")).toBe("");
+  expect(index.capitalize("rAivydas")).toBe("Raivydas");
+  expect(() => index.capitalize("123")).toThrow(
+    "Cannot capitalize non-alphabetic string"
   );
 });
