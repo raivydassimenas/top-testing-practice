@@ -1,0 +1,17 @@
+{
+  "name": "top-testing-practice",
+  "version": "1.0.0",
+  "description": "Solution to Testing practice exercises in The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Raivydas Šimėnas",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
