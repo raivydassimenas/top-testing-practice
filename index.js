@@ -14,6 +14,23 @@ function capitalize(s) {
     }
 }
 
+function reverseString(s) {
+    if (s === null) {
+        throw new Error("Cannot reverse null string");
+    }
+
+    return s.split("").reverse().join("");
+}
+
+const calculator = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    divide: (a, b) => a / b,
+    multiply: (a, b) => a * b 
+}
+
 module.exports = {
-    capitalize
+    capitalize,
+    reverseString,
+    calculator
 }
