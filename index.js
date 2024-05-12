@@ -29,8 +29,25 @@ const calculator = {
     multiply: (a, b) => a * b 
 }
 
+function caesarCipher(s, shift) {
+    return s.split("").map(ch => shiftChar(ch, shift)).join("");
+}
+
+function shiftChar(ch, shift) {
+    const upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    if (/^[A-Z]$/.test(ch)) {
+        return upperAlphabet[(upperAlphabet.indexOf(ch) + shift) % 26];
+    } else if (/^[a-z]$/.test(ch)) {
+        return lowerAlphabet[(lowerAlphabet.indexOf(ch) + shift) % 26];
+    } else {
+        return ch;
+    }
+}
+
 module.exports = {
     capitalize,
     reverseString,
-    calculator
+    calculator,
+    caesarCipher
 }

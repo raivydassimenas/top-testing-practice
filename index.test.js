@@ -30,4 +30,8 @@ test("calculator", () => {
   expect(index.calculator.multiply(2, 2)).toEqual(4);
   expect(index.calculator.divide(2, 2)).toEqual(1);
   expect(index.calculator.divide(2, 0)).toEqual(Infinity);
+});
+
+test("caesarCipher", () => {
+  expect(index.caesarCipher("Aa.Zz", 1)).toEqual("Bb.Aa");
 })
